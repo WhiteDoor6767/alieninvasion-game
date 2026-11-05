@@ -5,6 +5,8 @@ class Ship():
         self.screen=screen
 
         self.image=pygame.image.load('images/ship.bmp')
+        w, h = self.image.get_size()
+        self.image = pygame.transform.smoothscale(self.image, (w // 7, h // 7))
         self.rect=self.image.get_rect()
         self.screen_rect=screen.get_rect()
 
